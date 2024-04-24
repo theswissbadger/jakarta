@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: domin_odlnn
+  Date: 13.03.2024
+  Time: 15:08
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Buch erfassen</title>
+</h:head>
+
+<h:body>
+    <h:form id="form">
+        <h:outputLabel for="titel-id" value="Titel"/>
+        <h:inputText id="titel-id" value="#{buch.title}" />
+        <h:message for="titel-id" style="color: orangered"/>
+        <br/>
+        <h:outputLabel for="autor-id" value="Autor"/>
+        <h:inputText id="autor-id" value="#{buch.autor}" />
+        <h:message for="autor-id" style="color: red"/>
+        <br/>
+        <h:outputLabel for="verlag-id" value="Verlag"/>
+        <h:inputText id="verlag-id" value="#{buch.verlag}" />
+        <h:message for="verlag-id" style="color: yellow"/>
+        <br/>
+        <h:outputLabel for="price-id" value="Preis"/>
+        <h:inputText id="price-id" value="#{buch.price}" />
+        <h:message for="price-id" style="color: yellow"/>
+        <br/>
+        <h:outputLabel for="isbn-id" value="ISBN"/>
+        <h:inputText id="isbn-id" value="#{buch.isbn}" />
+        <h:message for="isbn-id" style="color: yellow"/>
+        <br/>
+
+        <h:commandButton action="#{regalbean.add}"/>
+    </h:form>
+</h:body>
+
+</html>
